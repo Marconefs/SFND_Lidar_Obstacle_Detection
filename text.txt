@@ -1,0 +1,13 @@
+Plane segmentation with RANSAC (Random Sample Consensus): ransac3d.cpp
+
+RANSAC runs for a max number of iterations, and returns the model with the best fit. 
+Each iteration randomly picks a subsample of the data and fits a model through it, 
+such as a line or a plane. Then the iteration with the highest number of inliers or the 
+lowest noise is used as the best model.
+
+Euclidean clustering: cluster.cpp
+uses KD-Tree for searching points during clustering task: kdtree.h 
+A KD-Tree is a binary tree that splits points between alternating axes.
+
+Find Bounding boxes with principal component analysis (PCA) including Z axis rotations.
+MOBoundingBox function in processPointClouds.cpp
